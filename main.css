@@ -1,0 +1,137 @@
+/* Define the Aloja font */
+@font-face {
+    font-family: 'Aloja';
+    src: url('fonts/Aloja-Regular.woff2') format('woff2'),
+         url('fonts/Aloja-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Arial', sans-serif; /* Fallback font */
+    background: url('images/director\ cat.jpg') repeat;
+    background-size: 100px 100px; /* Adjust size as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Container Styles */
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0); /* Slightly transparent background */
+    padding: 1000px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Title Styles */
+.title {
+    font-size: 5em;
+    font-family: 'Aloja', serif; /* Use Aloja font */
+    color: #ffcc00;
+    margin-bottom: 20px;
+    @font-face 
+        font-family: 'Aloja';
+        src: url('fonts/Aloja-Regular.woff2') format('woff2'),
+             url('fonts/Aloja-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    animation: slideInFromTop 1s ease-out;
+}
+
+/* Main Image Styles */
+.main-image {
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: zoomIn 1.5s ease-out;
+}
+
+/* Social Icons Styles */
+.social-icons {
+    margin-top: 20px;
+}
+
+.icon {
+    width: 100px; /* Adjust width to your needs */
+    height: 100px; /* Ensure height matches width for square icons */
+    margin: 0 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+/* Cursor Trail Styles */
+.cursor-trail {
+    position: fixed;
+    width: 300px; /* Size of each trail element */
+    height: 300px;
+    background-image: url('images/image-removebg-preview\ \(20\).png'); /* Image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none; /* Ensures it doesn't interfere with clicking */
+    transition: transform 0.2s ease-out, opacity 100000s ease-out;
+    z-index: 9999; /* Ensure it appears on top */
+}
+
+/* Cursor Trail Container Styles */
+.cursor-trail-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+
+
