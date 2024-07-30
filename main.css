@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    
+    /* Add repeating background image */
+    background-image: url('images/up\ up.gif'); /* Path to your background image */
+    background-repeat: repeat; /* Repeat the image */
+    background-size: 100px 100px; /* Adjust the size to your preference */
+    background-position: top left; /* Position the image */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.title-image {
+    max-width: 40%;
+    height: auto;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.center-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.composite-image {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #ff0000; /* Red border around the image */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.right-section {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-icons a {
+    display: block;
+    padding: 10px;
+    border: 2px solid #ff0000; /* Red border */
+    border-radius: 10px; /* Rounded corners */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.social-icons img {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+
+/* Hover effect */
+.social-icons a:hover {
+    border-color: #00ff00; /* Change border color on hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Change background color on hover */
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
