@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif; /* Update to your desired font */
+    color: rgb(6, 19, 124); /* Text color */
+    /* Use the animation class to apply the moving background */
+    background: url('images/Progetto senza titolo (2).png') no-repeat center center fixed;
+    background-size: cover;
+    animation: moveBackground 20s linear infinite; /* Apply the moving background animation */
+}
+
+/* Define the keyframes for the background movement */
+@keyframes moveBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 100%;
+    }
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.7); /* Semi-transparent background for text readability */
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-family: 'MingLiU', serif; /* Chinese-style font */
+    color: rgb(6, 19, 124); /* Consistent color */
+}
+
+p {
+    font-size: 1.2em;
+    font-family: 'Times New Roman', serif; /* Classic serif font */
+    color: rgb(6, 19, 124); /* Consistent color */
+}
+
+.icons {
+    margin: 20px 0;
+}
+
+.icon {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.icon img {
+    width: 40px; /* Icon size */
+    height: auto;
+    vertical-align: middle;
+}
+
+.icon a {
+    text-decoration: none;
+    /* Icon color not applicable; icons are images */
+}
