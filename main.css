@@ -1,0 +1,108 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Dark background */
+    color: #fff;
+    font-family: Arial, sans-serif;
+    transition: background-image 2s ease-out;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+.glowing-title {
+    font-size: 4em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    animation: glow 1s ease-in-out infinite alternate;
+    transition: transform 1s ease-out;
+}
+
+.mini-title {
+    font-size: 1.5em;
+    margin-top: 10px;
+    transition: transform 2s ease-out;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 80px #ff00ff, 0 0 160px #ff00ff;
+    }
+    to {
+        text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 50px #ff00ff, 0 0 100px #ff00ff, 0 0 200px #ff00ff;
+    }
+}
+
+.image-container {
+    margin-top: 30px;
+    opacity: 0;
+    transition: opacity 2s ease-out;
+}
+
+.main-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* JavaScript controlled class for transition */
+.background-image {
+    background-image: url('images/ROI.jpg'); /* Replace with your image URL */
+    background-size: 20% 20%; /* Adjust the size of the background image */
+    background-position: center;
+    background-repeat: repeat; /* Repeat the image */
+}
+
+.title-up {
+    transform: translateY(-100px);
+}
+
+.image-visible {
+    opacity: 1;
+}
+
+/* Social Media Icons */
+.social-icon {
+    position: fixed;
+    width: 125px;
+    height: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    z-index: 1000; /* Ensure icons are above other content */
+}
+
+.twitter-icon {
+    top: 10px;
+    right: 10px;
+}
+
+.telegram-icon {
+    top: 10px;
+    left: 10px;
+}
+
+.social-icon img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.social-icon:hover {
+    border-color: #ff00ff; /* Pink border on hover */
+    transform: scale(1.1); /* Slightly enlarge icon on hover */
+}
