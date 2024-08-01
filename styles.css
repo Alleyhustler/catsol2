@@ -4,7 +4,7 @@ body {
     font-family: 'Georgia', serif; /* Update to your desired font */
     color: rgb(6, 19, 124); /* Text color */
     /* Use the animation class to apply the moving background */
-    background: url('images/Progetto senza titolo (2).png') no-repeat center center fixed;
+    background: url('images/Progetto senza titolo (2).jpg') no-repeat center center fixed;
     background-size: cover;
     animation: moveBackground 20s linear infinite; /* Apply the moving background animation */
 }
